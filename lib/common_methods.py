@@ -26,6 +26,15 @@ def get_element_by_name(context, selector, timeout=5):
     return found_element
 
 
+def get_multiple_elements_by_xpath(context, selector):
+    found_elements = None
+    try:
+        found_elements = context.driver.find_elements_by_xpath(selector)
+    except NoSuchElementException as e:
+        logging.error(e)
+    return found_elements
+
+
 def filter_results_by_first_reg_year(context, year):
     css_locator_of_reg_year_section = '#app > div > main > div.root___3C6lR.container > div > div.col-md-3 > div >' \
                                       ' div > div > div:nth-child(3) > div.label___3agdr'
@@ -49,11 +58,6 @@ def sort_displayed_results(context, category, order):
     select_sort_type.select_by_visible_text(order_to_sort_by)
 
 
-def get_multiple_elements_by_xpath(context, selector):
-    found_elements = context.driver.find_elements_by_xpath(selector)
-    return found_elements
-
-
 def extract_first_reg_data_from_displayed_search_results(context):
     time.sleep(5)
     results = []
@@ -68,5 +72,11 @@ def extract_first_reg_data_from_displayed_search_results(context):
     results_years_only_as_ints = [int(x[5:len(x)]) for x in results]
     return results_years_only_as_ints
 
+
 def extract_price_from_displayed_search_results(context):
-    found_elements = get_multiple_elements_by_xpath('item___T1IPF')
+    results = []
+    found_elements = context.driver.find_elements_by_class_name('totalPrice___3yfNv')
+    for element in found_elements:
+        results.append(element.text)
+    results_prices_as_floats = [float(x[0:7]) for x in results]
+    return results_prices_as_floats

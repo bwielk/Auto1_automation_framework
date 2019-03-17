@@ -24,4 +24,10 @@ def verify_results_are_filtered_by_registration_year(context, year):
 
 @step('the results are sorted in {order} order by {category}')
 def verify_results_are_sorted_by_category_in_specific_order(context, order, category):
-    pass
+    results = common.extract_price_from_displayed_search_results(context)
+    if order == 'descending':
+        sorted_results = sorted(results, reverse=True)
+    else:
+        sorted_results = sorted(results)
+    assert sorted_results == results
+
