@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eab6182-c042-4174-b619-e72b9b9c0a49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/step_implementation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/integration_tests/steps/search_page_functionality.py" beforeDir="false" afterPath="$PROJECT_DIR$/integration_tests/steps/search_page_functionality.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/common_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_methods.py" afterDir="false" />
     </list>
@@ -14,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/auto1$Auto1.coverage" NAME="Auto1 Coverage Results" MODIFIED="1552839056201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/auto1$Auto1.coverage" NAME="Auto1 Coverage Results" MODIFIED="1552839446759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/auto1$environment.coverage" NAME="environment Coverage Results" MODIFIED="1552816284872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -22,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/common_methods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -43,19 +42,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/integration_tests/features/SearchFunctionality.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/integration_tests/steps/search_page_functionality.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/integration_tests/steps/search_page_functionality.py">
+        <entry file="file://$PROJECT_DIR$/lib/step_implementation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+            <state relative-caret-position="85">
+              <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#52#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,8 +97,9 @@
         <option value="$PROJECT_DIR$/lib/__init__.py" />
         <option value="$PROJECT_DIR$/integration_tests/features/SearchFunctionality.feature" />
         <option value="$PROJECT_DIR$/integration_tests/environment.py" />
-        <option value="$PROJECT_DIR$/lib/common_methods.py" />
         <option value="$PROJECT_DIR$/integration_tests/steps/search_page_functionality.py" />
+        <option value="$PROJECT_DIR$/lib/common_methods.py" />
+        <option value="$PROJECT_DIR$/lib/step_implementation.py" />
       </list>
     </option>
   </component>
@@ -121,6 +133,11 @@
               <item name="auto1" type="462c0819:PsiDirectoryNode" />
               <item name="integration_tests" type="462c0819:PsiDirectoryNode" />
               <item name="steps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto1" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,17 +238,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552744493161</updated>
-      <workItem from="1552778386028" duration="19293000" />
+      <workItem from="1552778386028" duration="19639000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Auto1 - 2019.03.17 at 15h 38m 13s.xml">
-      <configuration name="Auto1" configurationId="PyBehaveRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Auto1 - 2019.03.17 at 15h 39m 04s.xml">
-      <configuration name="Auto1" configurationId="PyBehaveRunConfigurationType" />
-    </history-entry>
     <history-entry file="Auto1 - 2019.03.17 at 15h 41m 34s.xml">
       <configuration name="Auto1" configurationId="PyBehaveRunConfigurationType" />
     </history-entry>
@@ -256,22 +267,28 @@
     <history-entry file="Auto1 - 2019.03.17 at 16h 08m 32s.xml">
       <configuration name="Auto1" configurationId="PyBehaveRunConfigurationType" />
     </history-entry>
+    <history-entry file="Auto1 - 2019.03.17 at 16h 11m 28s.xml">
+      <configuration name="Auto1" configurationId="PyBehaveRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Auto1 - 2019.03.17 at 16h 13m 13s.xml">
+      <configuration name="Auto1" configurationId="PyBehaveRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19293000" />
+    <option name="totallyTimeSpent" value="19639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09865772" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19463088" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49597314" visible="true" weight="0.3186969" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49597314" visible="true" weight="0.3186969" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49798658" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -356,29 +373,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/integration_tests/features/SearchFunctionality.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integration_tests/steps/search_page_functionality.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/common_methods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/features/SearchFunctionality.feature">
+    <entry file="file://$PROJECT_DIR$/lib/step_implementation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/integration_tests/steps/search_page_functionality.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        <state relative-caret-position="85">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
