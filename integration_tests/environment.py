@@ -1,7 +1,7 @@
-import behave
-import selenium
+from selenium import webdriver
 import logging
 import datetime
+import time
 
 
 def before_all(context):
@@ -9,7 +9,11 @@ def before_all(context):
 
 
 def before_scenario(context, scenario):
+    context.driver = webdriver.Chrome()
     logging.info("Running scenario %s" % scenario)
+    context.driver.get('https://www.autohero.com/de/search/')
+    context.driver.implicitly_wait(4)
+    time.sleep(5)
 
 
 def after_scenario(context, scenario):
