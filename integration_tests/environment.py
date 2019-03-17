@@ -22,4 +22,4 @@ def after_scenario(context, scenario):
 
 
 def after_all(context):
-    logging.info("All behave steps terminated their execution at %s" % datetime.now())
+    logging.info("All behave steps terminated their execution at %s" % datetime.datetime.now())
