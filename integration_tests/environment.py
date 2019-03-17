@@ -12,6 +12,7 @@ def before_scenario(context, scenario):
     context.driver = webdriver.Chrome()
     logging.info("Running scenario %s" % scenario)
     context.driver.get('https://www.autohero.com/de/search/')
+    context.driver.maximize_window()
     context.driver.implicitly_wait(4)
     time.sleep(5)
 
