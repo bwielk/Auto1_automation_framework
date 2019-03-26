@@ -46,5 +46,5 @@ def extract_price_from_displayed_search_results(context):
     found_elements = context.driver.find_elements_by_class_name('totalPrice___3yfNv')
     for element in found_elements:
         results.append(element.text)
-    results_prices_as_floats = [float(x[0:7]) for x in results]
+    results_prices_as_floats = [float(x.replace(' €', '')) for x in results]
     return results_prices_as_floats
