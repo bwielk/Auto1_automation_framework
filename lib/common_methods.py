@@ -10,7 +10,7 @@ def get_element_by_css_selector(context, selector, timeout=5):
     try:
         found_element = WebDriverWait(context.driver, timeout)\
             .until(EC.presence_of_element_located((By.CSS_SELECTOR, selector)))
-        logging.info('Found element with selector "%s"' % selector)
+        logging.info('Found element with selector "%s"' % selector) if found_element is not None else False
     except TimeoutException as e:
         logging.error(e)
     return found_element
@@ -21,7 +21,7 @@ def get_element_by_name(context, name, timeout=5):
     try:
         found_element = WebDriverWait(context.driver, timeout)\
             .until(EC.presence_of_element_located((By.NAME, name)))
-        logging.info('Found element with name attribute %s' % name)
+        logging.info('Found element with name attribute %s' % name) if found_element is not None else False
     except TimeoutException as e:
         logging.error(e)
     return found_element
@@ -31,7 +31,7 @@ def get_multiple_elements_by_xpath(context, xpath):
     found_elements = None
     try:
         found_elements = context.driver.find_elements_by_xpath(xpath)
-        logging.info('Found element with xpath "%s"' % xpath)
+        logging.info('Found element with xpath "%s"' % xpath) if len(found_elements) > 0 else False
     except NoSuchElementException as e:
         logging.error(e)
     return found_elements
