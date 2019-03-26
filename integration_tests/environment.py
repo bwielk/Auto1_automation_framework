@@ -6,6 +6,9 @@ import time
 
 def before_all(context):
     logging.info("Running a new set of tests")
+    console = logging.StreamHandler()
+    logging.basicConfig(level=logging.INFO)
+    logging.getLogger('').addHandler(console)
 
 
 def before_scenario(context, scenario):
