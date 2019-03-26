@@ -1,3 +1,5 @@
+import logging
+
 from selenium.webdriver.support.select import Select
 import time
 from lib.common_methods import get_element_by_css_selector, get_element_by_name
@@ -11,6 +13,7 @@ def filter_results_by_first_reg_year(context, year):
     reg_year_section.click()
     reg_year_dropdown = get_element_by_name(context, 'yearRange.min')
     select_reg_date = Select(reg_year_dropdown)
+    logging.info('Filtering results by first registration date %s' % str(year))
     select_reg_date.select_by_visible_text(year)
 
 
@@ -23,11 +26,13 @@ def sort_displayed_results(context, category, order):
             order_to_sort_by = 'Niedrigster Preis'
         else:
             order_to_sort_by = 'Höchster Preis'
+    logging.info('Sorting results by %s order' % order)
     select_sort_type.select_by_visible_text(order_to_sort_by)
 
 
 def extract_first_reg_data_from_displayed_search_results(context):
     time.sleep(5)
+    logging.info('Reading all first registration year displayed on the list of results')
     results = []
     num_of_elements_displayed = get_element_by_name(context, 'pageSize')
     select_page_size = Select(num_of_elements_displayed)
@@ -42,6 +47,7 @@ def extract_first_reg_data_from_displayed_search_results(context):
 
 
 def extract_price_from_displayed_search_results(context):
+    logging.info('Reading all prices displayed on the list of results')
     results = []
     found_elements = context.driver.find_elements_by_class_name('totalPrice___3yfNv')
     for element in found_elements:
